@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+    <meta charset="UTF-8">
+        <link rel="icon" href="./img/bgv192svg.svg" type="image/svg" sizes="192x192">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="Simple Progressive Web App  By Bos Naufal Built With Vue Js">
+        <meta name="black">
+        <title>RUN</title>
+      <!-- MANIFEST -->
+        <link rel="manifest" href="./manifest.json">
+      <!-- ADD TO HOMESCREEN SAFARI ON IOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Simple PWA">
+        <link rel="apple-touch-icon" href="./img/bgv192svg.svg.png">
+      <!-- ADD TO HOMESCREEN WINDOWS -->
+        <meta name="msapplicatoin-TileImage" content=" ./img/bgv192svg.svg.png">
+        <meta name="msapplicatoin-TileColor" content="#3d5165">
+      <!-- CSS --> 
+    <link href="./index.css" rel="stylesheet">
+      <!-- JS -->
+      <script src="./index.js" defer></script> 
+    </head>
+    <body>
+
+        <header id="header">
+            <ul>
+                <li><a href="#" class="logo">Run</a></li>
+                <li><a href="./php/login.html" class="active">Login/out</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        
+
+        <Section>
+            <h2 id="text"><span>il est temp de</span><br>Pedalé</h2>
+            
+            <img src="https://user-images.githubusercontent.com/65358991/170092559-883fe071-eb4f-4610-8c8b-a037d061c617.png" id="forest">
+            
+            <a href="#" id="btn">Explore</a>
+            
+            <img src="https://user-images.githubusercontent.com/65358991/170092605-eada6510-d556-45cc-b7fa-9e4d1d258d26.png" id="rocks">
+            <img src="https://user-images.githubusercontent.com/65358991/170092616-5a70c4af-2eed-496f-bde9-b5fcc7142a31.png" id="water">
+        </Section>
+
+        
+        <div class="sec">
+            <h2>Le Comité Régional de Cyclotourisme de Haute-Saône</h2>
+            <p>Le Comité Régional de Cyclotourisme de Bourgogne Franche-Comté est une association loi 1901 ayant pour but de promouvoir la pratique du Cyclotourisme – Route, VTT, VTC, Gravel, VAE – dans la région de Bourgogne Franche-Comté. Son siège social est fixé à l’adresse 27 rue de la Sous-Préfecture – 39100 DOLE.
+
+                Il représente la Fédération Française de Cyclotourisme et rassemble tous les groupements affiliés à la FFVélo dont leur siège social se trouve dans son ressort territorial à savoir les Départements de la Côte d’Or, du Doubs, du Jura, de la Nièvre, de Haute-Saône, de Saône et Loire, de l’Yonne et du Territoire de Belfort.
+                
+                Le comité régional a pour objectifs dans son ressort territorial :
+                – de favoriser toute action utile à la promotion et au développement de la pratique du vélo sous toutes ses formes (sur route et sur tous autres terrains) et avec tous types de vélos (VR, VTT, VTC, Gravel, VAE ) comme instrument de loisir, moyen de déplacement, de maintien en bonne santé ou pour son rétablissement, usage pratique et utilitaire….);
+                – de participer à la coordination de l’activité des associations et sections d’associations de cyclotourisme affiliées à la Fédération ;
+                – d’aider, sur le plan régional, la Fédération dans l’accomplissement de sa tâche telle qu’elle est définie dans les statuts et règlements de ladite Fédération ;
+                – de contribuer à la mise en œuvre de la politique définie par la Fédération et d’appliquer les instructions qu’il reçoit de celle-ci, en son nom ;
+                – d’assurer, auprès des pouvoirs publics et des diverses collectivités régionales, la défense des intérêts des associations et de leurs membres ainsi que des licenciés individuels ;
+                – d’étudier tous les problèmes concernant le cyclotourisme qui peuvent se présenter et en particulier de combattre la délinquance routière ;
+                – d’intégrer le concept de développement durable et de l’environnement dans toutes actions et les activités du cyclotourisme.</p>
+        </div>
+        
+        <footer>
+            <a href="https://bourgognefranchecomte.ffvelo.fr/">Le Comité Régional de Cyclotourisme de Haute-Saône</a>
+        </footer>
+        
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+            
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+                text.style.top = 50 + value * -.1 + '%';
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -.12 + 'px';
+                forest.style.top = value * .25 + 'px';
+                header.style.top = value * .5 + 'px';
+            })
+        </script>
+        
+    </body>
+</html>
